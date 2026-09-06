@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #070707; }
+      .grid-line { stroke: #202020; stroke-width: 1; stroke-dasharray: 2 4; }
+      .border { stroke: #2a2a2a; stroke-width: 1; }
+      .t-meta { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; font-weight: 500; fill: #888888; letter-spacing: 0.12em; text-transform: uppercase; }
+      .t-title { font-family: 'Geist', system-ui, sans-serif; font-size: 38px; font-weight: 800; fill: #F6F4F1; letter-spacing: -0.03em; }
+      .t-headline { font-family: 'Geist', system-ui, sans-serif; font-size: 20px; font-weight: 600; fill: #D6D4D0; letter-spacing: -0.02em; }
+      .pill { fill: #161616; stroke: #262626; stroke-width: 1; }
+      .pill-text { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #CCCCCC; letter-spacing: 0.08em; }
+      .tech-tag { font-family: monospace; font-size: 11px; fill: #777777; }
+    </style>
+  </defs>
+
+  <rect width="960" height="620" class="bg" />
+
+  <!-- Technical editorial grid -->
+  <line x1="48" y1="76" x2="912" y2="76" class="border" />
+  <line x1="48" y1="544" x2="912" y2="544" class="border" />
+  <line x1="48" y1="76" x2="48" y2="544" class="border" />
+  <line x1="912" y1="76" x2="912" y2="544" class="border" />
+  <line x1="360" y1="76" x2="360" y2="544" class="grid-line" />
+
+  <!-- Top bar metadata -->
+  <text x="48" y="48" class="t-meta">CREATIVE DIRECTION & BRAND</text>
+  <text x="912" y="48" class="t-meta" text-anchor="end">LONDON · 2025</text>
+
+  <!-- Left editorial column -->
+  <text x="76" y="132" class="tech-tag">[DEV ARCHITECTURE // 2025]</text>
+  <text x="76" y="186" class="t-title">MARTIN J WATTS</text>
+  <text x="76" y="222" class="t-headline">TIMELESS BRAND ARCHITECTURE</text>
+  
+  <text x="76" y="268" font-family="'Segoe UI', sans-serif" font-size="13px" fill="#888888">Art direction and strategic brand identity</text>
+  <text x="76" y="290" font-family="'Segoe UI', sans-serif" font-size="13px" fill="#888888"> for high-end luxury and culture.</text>
+
+  <!-- Status badges -->
+  <g transform="translate(76, 440)">
+    <rect width="80" height="26" rx="4" class="pill" />
+    <text x="40" y="17" class="pill-text" text-anchor="middle">DIRECTION</text>
+  </g>
+  <g transform="translate(166, 440)">
+    <rect width="80" height="26" rx="4" class="pill" />
+    <text x="40" y="17" class="pill-text" text-anchor="middle">IDENTITY</text>
+  </g>
+  <g transform="translate(256, 440)">
+    <rect width="80" height="26" rx="4" class="pill" />
+    <text x="40" y="17" class="pill-text" text-anchor="middle">EDITORIAL</text>
+  </g>
+
+  <!-- Right canvas: interactive viewport frame -->
+  <g transform="translate(390, 116)">
+    <!-- Window frame -->
+    <rect width="480" height="390" rx="8" fill="#111111" stroke="#2a2a2a" stroke-width="1" />
+    <!-- Browser header -->
+    <rect width="480" height="36" rx="8" fill="#171717" />
+    <rect y="30" width="480" height="6" fill="#171717" />
+    <circle cx="24" cy="18" r="4" fill="#333333" />
+    <circle cx="38" cy="18" r="4" fill="#333333" />
+    <circle cx="52" cy="18" r="4" fill="#333333" />
+    <rect x="84" y="8" width="260" height="20" rx="4" fill="#0c0c0c" stroke="#222222" stroke-width="1" />
+    <text x="100" y="22" font-family="monospace" font-size="11px" fill="#666666">https://martinjwatts.com</text>
+
+    <!-- Browser body content wireframe -->
+    <g transform="translate(32, 60)">
+      <text x="0" y="28" font-family="'Geist', sans-serif" font-size="24px" font-weight="700" fill="#EAE8E5" letter-spacing="-0.02em">MARTIN J WATTS</text>
+      <text x="0" y="52" font-family="'Segoe UI', sans-serif" font-size="12px" fill="#777777">JANSHER ALI · PRODUCTION ENGINE</text>
+      
+      <line x1="0" y1="72" x2="416" y2="72" stroke="#262626" stroke-width="1" />
+      
+      <!-- Minimalist layout mock wireframe -->
+      <rect x="0" y="92" width="128" height="154" rx="6" fill="#191919" stroke="#2b2b2b" stroke-width="1" />
+      <rect x="144" y="92" width="128" height="154" rx="6" fill="#151515" stroke="#242424" stroke-width="1" />
+      <rect x="288" y="92" width="128" height="154" rx="6" fill="#131313" stroke="#202020" stroke-width="1" />
+
+      <text x="16" y="226" font-family="monospace" font-size="10px" fill="#666666">SPEC 01</text>
+      <text x="160" y="226" font-family="monospace" font-size="10px" fill="#666666">SPEC 02</text>
+      <text x="304" y="226" font-family="monospace" font-size="10px" fill="#666666">LIVE 03</text>
+      
+      <rect x="0" y="266" width="260" height="8" rx="2" fill="#222222" />
+      <rect x="0" y="282" width="160" height="8" rx="2" fill="#1a1a1a" />
+    </g>
+  </g>
+
+  <!-- Bottom coordinate footer -->
+  <text x="48" y="580" class="tech-tag">51.5074° N, 0.1278° W · CREATIVE TECH</text>
+  <text x="912" y="580" class="tech-tag" text-anchor="end">EDITORIAL RUNTIME // VERIFIED ASSET</text>
+</svg>

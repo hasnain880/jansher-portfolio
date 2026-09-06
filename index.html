@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jansher Ali — Creative Developer</title>
+    <meta name="description" content="Creative developer portfolio of Jansher Ali. Digital experiences and bespoke web development for studios, agencies, and brands." />
+    <meta property="og:title" content="Jansher Ali — Creative Developer" />
+    <meta property="og:description" content="Creative developer portfolio of Jansher Ali. Digital experiences and bespoke web development for studios, agencies, and brands." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('theme');
+          if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-[#F6F4F1] text-[#010101] dark:bg-[#0E0E0E] dark:text-[#F3F1EC] antialiased selection:bg-[#010101] selection:text-[#F6F4F1] dark:selection:bg-[#F3F1EC] dark:selection:text-[#0E0E0E]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

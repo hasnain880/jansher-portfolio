@@ -1,0 +1,213 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #F6F4F1;
+    --bg-elevated: #EAE8E5;
+    --text-primary: #010101;
+    --text-secondary: #222222;
+    --text-muted: #666666;
+    --border-subtle: #EEEEEE;
+    --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  html.dark {
+    --bg-primary: #0E0E0E;
+    --bg-elevated: #171717;
+    --text-primary: #F3F1EC;
+    --text-secondary: #D4D2CD;
+    --text-muted: #8E8C87;
+    --border-subtle: #242424;
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+
+  body {
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-display, .font-geist {
+    font-family: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Global transitions for theme switching */
+html, body, #main-navigation, main, footer, section, .project-row, .editorial-link {
+  transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+.project-row:hover .project-num {
+  transform: translateX(4px);
+}
+
+.project-row:hover .project-title {
+  transform: scale(1.02);
+  transform-origin: left;
+}
+
+/* Custom editorial link underline effect */
+.editorial-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.editorial-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-link:hover::after,
+.editorial-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Hide scrollbar for clean aesthetics */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* =========================================================
+   EDITORIAL DARK MODE PALETTE
+   Sophisticated, high-contrast monochrome with warm undertone
+   ========================================================= */
+
+html.dark body {
+  background-color: #0E0E0E;
+  color: #F3F1EC;
+}
+
+html.dark .bg-\[\#F6F4F1\] {
+  background-color: #0E0E0E !important;
+}
+
+html.dark .bg-\[\#F6F4F1\]\/95 {
+  background-color: rgba(14, 14, 14, 0.94) !important;
+}
+
+html.dark .bg-\[\#EAE8E5\] {
+  background-color: #171717 !important;
+}
+
+html.dark .hover\:bg-\[\#EAE8E5\]:hover {
+  background-color: #1F1F1F !important;
+}
+
+html.dark .hover\:bg-\[\#EAE8E5\]\/70:hover {
+  background-color: rgba(30, 30, 30, 0.8) !important;
+}
+
+html.dark .bg-\[\#EEEEEE\] {
+  background-color: #242424 !important;
+}
+
+html.dark .border-\[\#EEEEEE\] {
+  border-color: #242424 !important;
+}
+
+html.dark .border-\[\#010101\] {
+  border-color: #F3F1EC !important;
+}
+
+html.dark .text-\[\#010101\] {
+  color: #F3F1EC !important;
+}
+
+html.dark .text-\[\#222222\] {
+  color: #D4D2CD !important;
+}
+
+html.dark .text-\[\#666666\] {
+  color: #8E8C87 !important;
+}
+
+html.dark .text-\[\#999999\] {
+  color: #73716D !important;
+}
+
+html.dark .text-\[\#000000\] {
+  color: #FFFFFF !important;
+}
+
+html.dark .hover\:text-\[\#000000\]:hover {
+  color: #FFFFFF !important;
+}
+
+html.dark .hover\:text-\[\#010101\]:hover {
+  color: #F3F1EC !important;
+}
+
+/* Primary CTA Inversion in Dark Mode */
+html.dark #hero-cta-work {
+  background-color: #F3F1EC !important;
+  color: #0E0E0E !important;
+}
+
+html.dark #hero-cta-work:hover {
+  background-color: #D4D2CD !important;
+}
+
+html.dark #hero-cta-contact {
+  border-color: #F3F1EC !important;
+  color: #F3F1EC !important;
+}
+
+html.dark #hero-cta-contact:hover {
+  background-color: #1F1F1F !important;
+}
+
+/* Brand & Hero Accent Dots */
+html.dark #nav-brand span.rounded-full,
+html.dark #hero span.rounded-full {
+  background-color: #F3F1EC !important;
+}
+
+/* Mobile Nav Toggle Bars */
+html.dark #nav-mobile-toggle span {
+  background-color: #F3F1EC !important;
+}
+
+/* Contact animated underline */
+html.dark #contact-email-link span.bg-\[\#010101\] {
+  background-color: #F3F1EC !important;
+}
+
+/* Page Transition Overlay */
+html.dark #page-transition-overlay {
+  background-color: #F3F1EC !important;
+}
+
+html.dark #page-transition-overlay span {
+  color: #0E0E0E !important;
+}
