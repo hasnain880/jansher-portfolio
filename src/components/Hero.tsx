@@ -79,20 +79,29 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             </div>
 
             {/* Subheading & Editorial Description */}
-            <div className="mt-6 max-w-lg">
+            <div className="mt-6 max-w-xl">
               <div className="overflow-hidden">
                 <h2
-                  className="font-display text-[26px] sm:text-[32px] font-medium leading-[1.1] text-[#010101] uppercase transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                  className="font-display text-[26px] sm:text-[34px] md:text-[38px] font-bold leading-[1.1] text-[#010101] uppercase tracking-tight transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                   style={{
                     transform: stage >= 2 ? 'translateY(0)' : 'translateY(100%)',
                     opacity: stage >= 2 ? 1 : 0,
                   }}
                 >
-                  CREATIVE DEVELOPER
-                  <br />
-                  <span className="text-[#666666] font-serif italic mr-2">&amp;</span>
-                  DEVELOPMENT PARTNER
+                  SHOPIFY &amp; E-COMMERCE DEVELOPER
                 </h2>
+              </div>
+
+              <div className="overflow-hidden mt-1.5">
+                <p
+                  className="font-display text-[17px] sm:text-[20px] md:text-[22px] font-normal text-[#222222] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                  style={{
+                    transform: stage >= 3 ? 'translateY(0)' : 'translateY(100%)',
+                    opacity: stage >= 3 ? 1 : 0,
+                  }}
+                >
+                  Creative Development Partner for Brands &amp; Agencies
+                </p>
               </div>
 
               <div className="overflow-hidden mt-4">
@@ -103,7 +112,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                     opacity: stage >= 4 ? 1 : 0,
                   }}
                 >
-                  I build digital experiences for studios, agencies and brands that need reliable execution from Figma to production.
+                  I build and optimize Shopify stores for e-commerce brands and creative agencies. From custom theme development to Shopify Plus engineering, I handle the technical execution so you can focus on growth.
                 </p>
               </div>
             </div>
@@ -124,7 +133,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                   Core Technologies
                 </p>
                 <p className="text-[12px] font-medium tracking-tight text-[#010101]">
-                  WEBFLOW · SHOPIFY · WORDPRESS · REACT · GSAP
+                  SHOPIFY · SHOPIFY PLUS · LIQUID · REACT · WEBFLOW
                 </p>
               </div>
             </div>

@@ -9,6 +9,8 @@ export interface ProjectItem {
   role?: string;
   tech?: string[];
   description?: string;
+  subtitle?: string;
+  bullets?: string[];
 }
 
 export interface CapabilityItem {

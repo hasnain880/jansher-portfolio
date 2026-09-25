@@ -80,37 +80,58 @@ export const ecommerceProjects: ProjectItem[] = [
     id: 'mowalola',
     number: '01',
     title: 'MOWALOLA',
-    category: 'LUXURY COMMERCE',
+    subtitle: 'Luxury Fashion E-Commerce',
+    category: 'LUXURY FASHION E-COMMERCE',
     year: '2025',
     url: 'https://mowalola.com',
     image: '/projects/mowalola.jpg',
     role: 'Shopify Plus Engineering',
-    tech: ['Shopify', 'Liquid', 'Custom Checkout'],
-    description: 'High-volume international drop commerce with custom queue handling.'
+    tech: ['Shopify Plus', 'Liquid', 'JSON Templates', 'Checkout Ext.'],
+    description: 'Custom Shopify Plus theme sections and high-traffic drop architecture.',
+    bullets: [
+      'Built custom Shopify Plus theme sections using Liquid and JSON templates',
+      'Developed product page architecture for luxury fashion drops',
+      'Optimized mobile experience and checkout flow for high-traffic releases',
+      'Integrated third-party tools for size guides and inventory management'
+    ]
   },
   {
     id: 'ilixa',
     number: '02',
     title: 'ILIXA SKIN',
-    category: 'CLINICAL SKINCARE',
+    subtitle: 'Clinical Skincare Brand',
+    category: 'CLINICAL SKINCARE BRAND',
     year: '2024',
     url: 'https://ilixaskin.com',
     image: '/projects/ilixa.png',
-    role: 'E-Commerce Architecture',
-    tech: ['Shopify', 'JavaScript', 'Liquid'],
-    description: 'Minimalist barrier repair formulations with rapid product bundling.'
+    role: 'Shopify E-Commerce Architecture',
+    tech: ['Shopify', 'Metafields', 'Liquid', 'Subscriptions'],
+    description: 'Custom Shopify theme structure and metafield-driven ingredient architecture.',
+    bullets: [
+      'Developed custom Shopify theme structure for clinical skincare product catalog',
+      'Built product page templates with metafields for ingredient details and usage info',
+      'Implemented responsive design focused on trust and conversion optimization',
+      'Integrated custom subscription recharge flows and dynamic bundle builder'
+    ]
   },
   {
     id: 'chiara',
     number: '03',
     title: 'CHIARA FAIRFAX',
-    category: 'DIRECTIONAL SPORTSWEAR',
+    subtitle: 'Directional Sportswear Brand',
+    category: 'DIRECTIONAL SPORTSWEAR BRAND',
     year: '2024',
     url: 'https://chiarafairfax.com',
     image: '/projects/chiara.png',
     role: 'Custom Shopify Experience',
-    tech: ['Shopify', 'Interactive Swatches', 'CSS Grid'],
-    description: 'London-crafted reversible lycra sets with dual-side garment previews.'
+    tech: ['Shopify', 'Custom Sections', 'Animations', 'Interactive Swatches'],
+    description: 'Bespoke product layouts, interactive colorways, and rich storytelling.',
+    bullets: [
+      'Created custom Shopify theme experience for independent sportswear label',
+      'Developed bespoke product pages and collection layouts',
+      'Focused on brand storytelling through custom sections and animations',
+      'Integrated custom size recommendation chart and dynamic currency switcher'
+    ]
   }
 ];
 

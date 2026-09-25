@@ -89,7 +89,7 @@ const AsymmetricProjectItem: React.FC<AsymmetricCardProps> = ({
           transitionDelay: `${delayOffset + 150}ms`,
         }}
       >
-        <div className="flex items-baseline justify-between gap-4">
+        <div className="flex flex-wrap items-baseline justify-between gap-2">
           <h3 className="font-display font-bold text-[20px] sm:text-[24px] tracking-tight text-[#010101]">
             <a
               href={project.url}
@@ -98,6 +98,11 @@ const AsymmetricProjectItem: React.FC<AsymmetricCardProps> = ({
               className="editorial-link"
             >
               {project.title}
+              {project.subtitle && (
+                <span className="font-normal text-[#555555] ml-2 text-[16px] sm:text-[19px]">
+                  — {project.subtitle}
+                </span>
+              )}
             </a>
           </h3>
           <span className="font-mono text-[12px] sm:text-[13px] text-[#666666]">
@@ -106,16 +111,28 @@ const AsymmetricProjectItem: React.FC<AsymmetricCardProps> = ({
         </div>
 
         <div className="flex items-center justify-between mt-1 text-[13px] font-mono text-[#666666]">
-          <span>{project.category}</span>
-          <span className="text-[12px] text-[#222222]">{project.role}</span>
+          <span className="font-semibold text-[#010101]">{project.role}</span>
+          <span className="text-[12px] text-[#666666]">{project.category}</span>
         </div>
+
+        {/* Technical Deliverables / Bullet points */}
+        {project.bullets && project.bullets.length > 0 && (
+          <ul className="mt-3.5 space-y-1.5 border-t border-[#EEEEEE] pt-3 text-[13px] sm:text-[14px] text-[#444444] font-mono leading-relaxed">
+            {project.bullets.map((bullet, idx) => (
+              <li key={idx} className="flex items-start gap-2.5">
+                <span className="text-[#010101] font-bold select-none">•</span>
+                <span>{bullet}</span>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );
 };
 
 export const EcommerceWork: React.FC = () => {
-  const [p1, p2, p3, p4, p5] = ecommerceProjects;
+  const [p1, p2, p3] = ecommerceProjects;
 
   return (
     <section
@@ -126,11 +143,11 @@ export const EcommerceWork: React.FC = () => {
         id="ecommerce-header"
         category="[COMMERCE // 02]"
         title="SELECTED E-COMMERCE"
-        description="High-velocity storefronts, custom checkout architectures, and headless drops for fashion and design brands."
+        description="Shopify theme development, Shopify Plus engineering, and high-conversion storefronts for luxury fashion, skincare, and sportswear brands."
       />
 
-      {/* Asymmetric composition: Large + Asymmetric Pair + Asymmetric Pair */}
-      <div className="space-y-12 md:space-y-20">
+      {/* Structured composition: Large Featured Flagship + 2-Column Showcase */}
+      <div className="space-y-12 md:space-y-16">
         {/* Row 1: Large Featured Flagship (MOWALOLA) */}
         {p1 && (
           <div className="w-full">
@@ -142,10 +159,10 @@ export const EcommerceWork: React.FC = () => {
           </div>
         )}
 
-        {/* Row 2: Asymmetric Grid (IDA SHOP: 5 cols, ILIXA SKIN: 7 cols) */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
+        {/* Row 2: Two-column grid (ILIXA SKIN & CHIARA FAIRFAX) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
           {p2 && (
-            <div className="md:col-span-5">
+            <div>
               <AsymmetricProjectItem
                 project={p2}
                 size="medium"
@@ -154,31 +171,9 @@ export const EcommerceWork: React.FC = () => {
             </div>
           )}
           {p3 && (
-            <div className="md:col-span-7 md:mt-12">
+            <div>
               <AsymmetricProjectItem
                 project={p3}
-                size="tall"
-                delayOffset={200}
-              />
-            </div>
-          )}
-        </div>
-
-        {/* Row 3: Inverted Asymmetric Grid (CHIARA FAIRFAX: 7 cols, DAISY FACE: 5 cols) */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
-          {p4 && (
-            <div className="md:col-span-7">
-              <AsymmetricProjectItem
-                project={p4}
-                size="tall"
-                delayOffset={100}
-              />
-            </div>
-          )}
-          {p5 && (
-            <div className="md:col-span-5 md:mt-8">
-              <AsymmetricProjectItem
-                project={p5}
                 size="medium"
                 delayOffset={200}
               />

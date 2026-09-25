@@ -32,15 +32,15 @@ export const Footer: React.FC = () => {
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#EEEEEE] pb-6">
           <div className="flex items-center gap-4 sm:gap-6 flex-wrap">
             <span className="text-[10px] sm:text-[11px] uppercase tracking-widest font-bold text-[#010101]">
-              DEVELOPMENT PARTNER
+              SHOPIFY &amp; E-COMMERCE
             </span>
             <span className="text-[10px] text-[#999999]">•</span>
             <span className="text-[10px] sm:text-[11px] uppercase tracking-widest text-[#666666]">
-              WEBFLOW
+              SHOPIFY PLUS
             </span>
             <span className="text-[10px] text-[#999999]">•</span>
             <span className="text-[10px] sm:text-[11px] uppercase tracking-widest text-[#666666]">
-              SHOPIFY
+              LIQUID &amp; JSON TEMPLATES
             </span>
             <span className="text-[10px] text-[#999999]">•</span>
             <span className="text-[10px] sm:text-[11px] uppercase tracking-widest text-[#666666]">
@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
             </span>
             <span className="text-[10px] text-[#999999]">•</span>
             <span className="text-[10px] sm:text-[11px] uppercase tracking-widest text-[#666666]">
-              GSAP
+              WEBFLOW
             </span>
           </div>
 
